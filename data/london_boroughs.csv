@@ -1,0 +1,33 @@
+borough,designation,political_control,area_km2,population,lat,lon,density_per_km2
+Barking and Dagenham,Outer,Labour,36.1,219992,51.5607,0.1557,6094.0
+Barnet,Outer,Labour,86.7,389101,51.6252,-0.1517,4488.0
+Bexley,Outer,Conservative,60.6,247835,51.4549,0.1505,4090.0
+Brent,Outer,No overall control,43.3,341221,51.5588,-0.2817,7880.0
+Bromley,Outer,Conservative,150.1,329578,51.3992,0.0165,2196.0
+Camden,Inner,Labour,21.8,218049,51.529,-0.1255,10002.0
+Croydon,Outer,No overall control,86.5,392224,51.3714,-0.0977,4534.0
+Ealing,Outer,Labour,55.5,369937,51.513,-0.3089,6666.0
+Enfield,Outer,No overall control,82.2,327224,51.6538,-0.0799,3981.0
+Greenwich,Inner [note 3],Labour,47.3,291080,51.4892,0.0648,6154.0
+Hackney,Inner,Green,19.1,261491,51.545,-0.0553,13691.0
+Hammersmith and Fulham,Inner,Labour,16.4,185238,51.4927,-0.2339,11295.0
+Haringey,Outer[note 3],No overall control,29.6,261811,51.6,-0.1119,8845.0
+Harrow,Outer,Conservative,50.5,261185,51.5898,-0.3346,5172.0
+Havering,Outer,Reform UK,112.3,264703,51.5812,0.1837,2357.0
+Hillingdon,Outer,Conservative,115.7,310681,51.5441,-0.476,2685.0
+Hounslow,Outer,Labour,56.0,290488,51.4746,-0.368,5187.0
+Islington,Inner,Labour,14.9,220373,51.5416,-0.1022,14790.0
+Kensington and Chelsea,Inner,Conservative,12.1,146154,51.502,-0.1947,12079.0
+Kingston upon Thames,Outer,Liberal Democrat,37.2,168302,51.4085,-0.3064,4524.0
+Lambeth,Inner,No overall control,26.8,316812,51.4607,-0.1163,11821.0
+Lewisham,Inner,Green,35.1,298653,51.4452,-0.0209,8509.0
+Merton,Outer,Labour,37.6,210709,51.4014,-0.1958,5604.0
+Newham,Outer[note 3],No overall control,36.2,358645,51.5077,0.0469,9907.0
+Redbridge,Outer,Labour,56.4,310911,51.559,0.0741,5513.0
+Richmond upon Thames,Outer,Liberal Democrat,57.4,194894,51.4479,-0.326,3395.0
+Southwark,Inner,No overall control,28.9,311913,51.5035,-0.0804,10793.0
+Sutton,Outer,Liberal Democrat,43.8,209602,51.3618,-0.1945,4785.0
+Tower Hamlets,Inner,Aspire,19.8,325789,51.5099,-0.0059,16454.0
+Waltham Forest,Outer,Green,38.8,275887,51.5908,-0.0134,7110.0
+Wandsworth,Inner,Labour,34.3,329035,51.4567,-0.191,9593.0
+Westminster,Inner,Labour,21.5,211365,51.4973,-0.1372,9831.0
