@@ -39,5 +39,23 @@ with right:
                                 mapbox_style="open-street-map")
     st.plotly_chart(fig_map, use_container_width=True)
 
+st.subheader("Population vs Area")
+fig_scatter = px.scatter(
+    view,
+    x="area_km2",
+    y="population",
+    size="density_per_km2",
+    color="designation",
+    hover_name="borough",
+    hover_data=["density_per_km2"],
+    labels={
+        "area_km2": "Area (km²)",
+        "population": "Population",
+        "density_per_km2": "Density (/km²)",
+        "designation": "Region",
+    },
+)
+st.plotly_chart(fig_scatter, use_container_width=True)
+
 st.subheader("Data")
 st.dataframe(view, use_container_width=True)
