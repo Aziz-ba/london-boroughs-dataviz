@@ -7,6 +7,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 df = pd.read_csv(ROOT / "data" / "london_boroughs.csv")
@@ -39,6 +40,25 @@ sc = ax.scatter(df["lon"], df["lat"], s=df["population"] / 800, c=df["density_pe
 ax.set_xlabel("Longitude"); ax.set_ylabel("Latitude"); ax.set_title("London boroughs (size=pop, color=density)")
 plt.colorbar(sc, label="Density / km²"); ax.grid(alpha=0.3)
 plt.tight_layout(); plt.savefig(A / "map_scatter.png", dpi=130); plt.close()
+
+# 5) Interactive Plotly scatter plot: population vs area, sized by density, colored by region
+fig_scatter = px.scatter(
+    df,
+    x="area_km2",
+    y="population",
+    size="density_per_km2",
+    color="designation",
+    hover_name="borough",
+    hover_data=["density_per_km2"],
+    title="London Boroughs: Population vs Area",
+    labels={
+        "area_km2": "Area (km²)",
+        "population": "Population",
+        "density_per_km2": "Density (/km²)",
+        "designation": "Region",
+    },
+)
+fig_scatter.write_html(A / "area_vs_population_interactive.html")
 
 # ---- insights ----
 inner = df[df.designation == "Inner"]; outer = df[df.designation == "Outer"]
