@@ -47,13 +47,24 @@ fig_scatter = px.scatter(
     size="density_per_km2",
     color="designation",
     hover_name="borough",
-    hover_data=["density_per_km2"],
+    hover_data={
+        "area_km2": ":.1f",
+        "population": ":,",
+        "density_per_km2": ":,.0f",
+        "designation": True,
+    },
+    size_max=28,
     labels={
         "area_km2": "Area (km²)",
         "population": "Population",
         "density_per_km2": "Density (/km²)",
         "designation": "Region",
     },
+)
+fig_scatter.update_layout(
+    legend_title_text="Region",
+    xaxis=dict(showgrid=True, gridcolor="rgba(200,200,200,0.2)"),
+    yaxis=dict(showgrid=True, gridcolor="rgba(200,200,200,0.2)"),
 )
 st.plotly_chart(fig_scatter, use_container_width=True)
 
