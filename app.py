@@ -68,5 +68,21 @@ fig_scatter.update_layout(
 )
 st.plotly_chart(fig_scatter, use_container_width=True)
 
+st.subheader("Borough Liveability Ranking")
+# Proxy score: Higher area and lower density are weighted as 'more liveable'
+# Normalized against the full dataset for consistent ranking
+max_area = df["area_km2"].max()
+max_dens = df["density_per_km2"].max()
+min_dens = df["density_per_km2"].min()
+
+orm_area = view["area_km2"] / max_area
+orm_density = (max_dens - view["density_per_km2"]) / (max_dens - min_dens)
+view_ranked = view.assign(liveability_score=((norm_area + norm_density) / 2 * 100).round(1))
+
+st.dataframe(
+    view_ranked.sort_values("liveability_score", ascending=False)[["borough", "liveability_score", "designation"]],
+    use_container_width=True
+)
+
 st.subheader("Data")
 st.dataframe(view, use_container_width=True)
